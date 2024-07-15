@@ -25,7 +25,6 @@ int main() {
         return -1;
     }
 
-    // Connecting to the server:
     if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
         std::cout << "Connection Failed!" << std::endl;
         return -1;
@@ -39,7 +38,7 @@ int main() {
         send(sock, buffer, strlen(buffer), 0);
         std::cout << "Comand sent\n";
 
-        // Check for a quit command to quit:
+        // Check for quit:
         if (strcmp(buffer, "quit") == 0) {
             break;
         }

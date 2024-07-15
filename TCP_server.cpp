@@ -35,7 +35,6 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    // x)
     std::cout << "==================================\n          Server Started:\n==================================" << std::endl;
 
     // Listen:
@@ -50,9 +49,6 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    
-
-    // Loop to keep receiving commands:
     while(true) {
         memset(buffer, 0, sizeof(buffer));  // clear the buffer;
         int valread = read(new_socket, buffer, 1024);
