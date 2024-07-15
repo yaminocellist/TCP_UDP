@@ -5,6 +5,8 @@
 #include <string.h>
 #include <arpa/inet.h>
 
+#define TCP_PORT 8080
+
 int main() {
     int sock = 0;
     struct sockaddr_in serv_addr;
@@ -12,7 +14,7 @@ int main() {
 
     // Creating socket:
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-        std::cout << "Socket creation error!" << std::endl;
+        std::cout << "Creating socket error!" << std::endl;
         return -1;
     }
 
