@@ -78,7 +78,6 @@ int main() {
         }
         std::cout << std::endl;
 
-        // Uncomment when TCP server is available
         // ssize_t sent_bytes = send(tcp_sock, buffer, received_bytes, 0);
         // if (sent_bytes < 0) {
         //     std::cerr << "Sending data to TCP server error!" << std::endl;
